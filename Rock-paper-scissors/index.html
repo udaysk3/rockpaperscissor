@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="shortcut icon" href="./assets/rock-paper-scissors-neon-icons.png">
+    <title>Rock Paper Scissors</title>
+</head>
+
+<body>
+    <main>
+    <div class="container">
+    <div class="your-score">
+        <h2>You(Player)</h2>
+        <p>0</p>
+
+    </div>
+    <div class="computer-score">
+        <h2>Computer</h2>
+        <p>0</p>
+
+    </div>
+</div>
+<div class="intro">
+    <h2>Rock Paper and Scissors</h2>
+    <img class="img " src="./assets/rock-paper-scissors-neon-icons.png" alt="logo">
+    <h3>are you ready ? </h3>
+     <button class="btn btn-grad" id="fading-btn">Let's Play</button>
+</div>
+
+
+<div class="game-page fadeOut">
+    <h2 class="winner">Choose an option</h2>
+    <div class="hands">
+        <img src="./assets/rock.png" alt="rock hand" class="your-hand">
+        <img src="./assets/rock.png" alt="rock hand" class="computer-hand">
+    </div>
+    <div class="options ">
+        <button class="rock btn-grad hover">rock</button>
+        <button class="paper btn-grad hover">paper</button>
+        <button class="scissors btn-grad hover">scissors</button>
+      </div>
+</div>
+
+<div class="gameover">
+    <h3 class="fadeOutgameover win">You Win &#128525 &#129304</h3>
+    <img class="cup fadeOutgameover win  " src="./assets/cup.png" alt="cup">
+    <h3 class="fadeOutgameover lost">You Lost &#128543 &#128542</h3>
+
+    
+</div>
+
+<div class="play-again">
+    <button class="fadeOutgameover win btn btn-grad playagain">Play Again</button>
+</div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>

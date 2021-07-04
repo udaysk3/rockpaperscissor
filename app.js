@@ -81,7 +81,7 @@ function compareHands(playerChoice,computerChoice) {
     
 
     else if(playerChoice === 'rock' )
-    {   if(rockProbability >100)
+    {   if(rockProbability >8)
         {
             decider.innerHTML = `<h4>Dont Play Smart! &#128579</h4>`;
             gameover(0,1);
@@ -94,7 +94,7 @@ function compareHands(playerChoice,computerChoice) {
     }
     else if(playerChoice ==='paper')
     {
-        if(paperProbability >100)
+        if(paperProbability >8)
         {
             decider.innerHTML = `<h4>Dont Play Smart! &#128579</h4>`;
             gameover(0,1);

@@ -74,55 +74,66 @@ let rockProbability = 0;
 let paperProbability = 0;
 
 function compareHands(playerChoice,computerChoice) {
+  
     if(playerChoice === computerChoice)
     {
         decider.innerHTML =`<h3>Its a tie &#128528</h3>`;
     }
     
 
-    else if(playerChoice === 'rock' )
-    {   if(rockProbability >100)
+    else if(playerChoice === "rock" )
+    {   if(computerChoice ==="scissors")
         {
-            decider.innerHTML = `<h4>Dont Play Smart! &#128579</h4>`;
-            gameover(0,1);
-            return;
+          decider.innerHTML =`<h3>You Win &#128526</h3>`;
+          yourScore++;
+          
+          updateScore(yourScore,computerScore);
         }
-        decider.innerHTML =`<h3>You Win &#128526</h3>`;
-        yourScore++;
-        rockProbability++;
-        updateScore(yourScore,computerScore);
+        else{
+          
+          decider.innerHTML =`<h3>Computer Wins &#128529</h3>`;
+          computerScore++;
+          updateScore(yourScore,computerScore);
+        }
+       
     }
-    else if(playerChoice ==='paper')
+    else if(playerChoice ==="scissors")
     {
-        if(paperProbability >100)
+        if(computerChoice === "paper")
         {
-            decider.innerHTML = `<h4>Dont Play Smart! &#128579</h4>`;
-            gameover(0,1);
-            return;
+          decider.innerHTML =`<h3>You Win &#128526</h3>`;
+          yourScore++;
+          
+          updateScore(yourScore,computerScore);
         }
-        decider.innerHTML =`<h3>Computer Wins &#128529</h3>`;
-        computerScore++;
-        paperProbability++;
-        updateScore(yourScore,computerScore);
-
+        else{
+          decider.innerHTML =`<h3>Computer Wins &#128529</h3>`;
+          computerScore++;
+         
+          updateScore(yourScore,computerScore);
+        }
     }
-    else if(playerChoice === 'scissors')
+    else if(playerChoice === "paper")
     {   
       
-        if(computerChoice === 'paper')
-        {
-        decider.innerHTML =`<h3>You Win &#128526</h3>`;
-        yourScore++;
-        updateScore(yourScore,computerScore);
-            
+        if(computerChoice === "rock")
+        { 
+          decider.innerHTML =`<h3>You Win &#128526</h3>`;
+          yourScore++;
+          
+          updateScore(yourScore,computerScore);
         }
-        else if(computerChoice ==='rock'){
-        decider.innerHTML =`<h3>Computer Wins &#128529</h3>`;
+        else{
+          decider.innerHTML =`<h3>Computer Wins &#128529</h3>`;
         computerScore++;
+      
         updateScore(yourScore,computerScore);
-
         }
+       
     }
+   
+  
+
 }
 
 function updateScore(yourScore,computerScore){
@@ -139,14 +150,14 @@ function winnerAnnounce(yourScore,computerScore)
 {
     if(yourScore === 10)
     {
-    console.log('you win');
+    // console.log('you win');
     gameover(1,0);
 
 
     }
     else if(computerScore ===10)
     {
-    console.log('computer wins');
+    // console.log('computer wins');
     gameover(0,1);
 
     }

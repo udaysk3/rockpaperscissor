@@ -255,6 +255,9 @@ div.fadeIn {
 }
 
 @media screen and (max-width: 554px) {
+  body{
+    overflow: hidden;
+    }
   main {
     width: 100vw;
     height: 100vh;
